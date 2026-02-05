@@ -14,8 +14,10 @@ app.get("/", (req, res) => {
     res.send("server del mio blog")
 })
 
-//creo array dati json da ritornare
 
+//creo rotta bacheca
+app.get("/bacheca", (req, res)=>{
+//creo array dati json da ritornare
 const post = [
     {
         id: 1,
@@ -54,7 +56,9 @@ const post = [
     }
 ]
 
+//ritorno l'array post
 res.json(post)
+})
 //porta in ascolto
 
 app.listen(port, () => {
